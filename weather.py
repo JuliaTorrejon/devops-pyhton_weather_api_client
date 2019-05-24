@@ -27,11 +27,11 @@ def temperature_kelvin_to_celsius(temp_in_kelvin):
 # API Call & Parameters requested from the API response
 def fetch_weather_(city_name, country_code, appid)
 
-# Build URL query depending on if there is a country or not
+# Build URL query depending on if there is a country or not -It restricts cities to an ISO 3166 country code
     if country_code:
         query = {"q":city_name + "," + country_code, "appid":api_key}
     else:
-        query = {"q":city_name, "APPID":API_key}
+        query = {"q":city_name, "appid":api_key}
 
 # Get data from openweathermap.org & passing parameter in URL
 r = requests.get(‘api.openweathermap.org/data/2.5/weather’, params=query)
