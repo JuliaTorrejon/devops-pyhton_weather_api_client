@@ -24,12 +24,12 @@ from decimal import *
 def temperature_kelvin_to_celsius(temp_in_kelvin):
     return decimal(temp_in_kelvin) - decimal(273.15)
 
-# API Call & parameters
-def fetch_weather_(city_name, country_code, APPID)
+# API Call & Parameters requested from the API response
+def fetch_weather_(city_name, country_code, appid)
 
 # Build URL query depending on if there is a country or not
     if country_code:
-        query = {"q":city_name + "," + country_code, "APPID":API_key}
+        query = {"q":city_name + "," + country_code, "appid":api_key}
     else:
         query = {"q":city_name, "APPID":API_key}
 
