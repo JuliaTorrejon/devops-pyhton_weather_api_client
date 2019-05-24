@@ -27,7 +27,7 @@ def temperature_kelvin_to_celsius(temp_in_kelvin):
 # API Call & Parameters requested from the API response
 def fetch_weather_(city_name, country_code, appid)
 
-# Build URL query depending on if there is a country or not -It restricts cities to an ISO 3166 country code
+# Build URL query depending on if there is a country or not - It restricts cities to an ISO 3166 country code
     if country_code:
         query = {"q":city_name + "," + country_code, "appid":api_key}
     else:
@@ -35,6 +35,18 @@ def fetch_weather_(city_name, country_code, appid)
 
 # Get data from openweathermap.org & passing parameter in URL
 r = requests.get(‘api.openweathermap.org/data/2.5/weather’, params=query)
+
+# Check that the URL has been correctly encoded by printing the URL
+print(r.url)
+
+# Check the HTTP response status code
+r.status_code
+
+# If there is a staus_code = 200 - then we have a valid response
+
+
+
+
 
 # The option parser is generated based on the docstring above that is passed to docopt function
 if __name__ == '__main__':
