@@ -39,12 +39,13 @@ r = requests.get(‘api.openweathermap.org/data/2.5/weather’, params=query)
 # Check that the URL has been correctly encoded by printing the URL
 print(r.url)
 
-# Check the HTTP response status code
+# Check the HTTP response status code - If there is a staus_code = 200 - then we have a valid response
 r.status_code
 
-# If there is a staus_code = 200 - then we have a valid response
+# In case the JSON decoding fails, r.json() raises an exception
+r.json()
 
-
+# Print reponse
 
 
 
