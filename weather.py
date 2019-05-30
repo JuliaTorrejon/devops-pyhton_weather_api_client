@@ -54,7 +54,7 @@ clouds = response["all"]["clouds"]
 rain = response["h1"]["rain"]
 sunrise = response["sys"]["sunrise"]
 sunset = response["sys"]["sunset"]
-country =  response["sys"]["country"]
+country = response["sys"]["country"]
 
 # The option parser is generated based on the docstring above that is passed to docopt function
 if __name__ == '__main__':
