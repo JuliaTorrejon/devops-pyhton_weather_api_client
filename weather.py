@@ -42,10 +42,12 @@ print(r.url)
 # Check the HTTP response status code - If there is a staus_code = 200 - then we have a valid response
 status = r.status_code
 
-# In case the JSON decoding fails, r.json() raises an exception
+# If HTTP status code is = 200 (Valid response)
+if r.status_code == 200:
 response = r.json()
 
-# Print reponse
+# Print (response)
+# Print (response)[]
 temperature = temp_kelvin_to_celsius(response["main"]["temp"])
 max_temperature = temp_kelvin_to_celsius(response["main"]["temp_max"])
 min_temperature = temp_kelvin_to_celsius(response["main"]["temp_min"])
@@ -55,6 +57,7 @@ rain = response["h1"]["rain"]
 sunrise = response["sys"]["sunrise"]
 sunset = response["sys"]["sunset"]
 country = response["sys"]["country"]
+
 
 # The option parser is generated based on the docstring above that is passed to docopt function
 if __name__ == '__main__':
