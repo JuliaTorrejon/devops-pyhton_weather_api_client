@@ -71,6 +71,18 @@ else:
       country = ""
       json = ""
       
+# Return a dictionary
+temperature = "temperature"
+currentweather = {}
+currentweather = "temperature"
+currentweather = "max_temperature"
+currentweather = "min_temperature"
+currentweather = "humidity"
+currentweather = "clouds"
+currentweather = "rain"
+c
+
+      
 # The option parser is generated based on the docstring above that is passed to docopt function
 if __name__ == '__main__':
     arguments = docopt(__doc__)
