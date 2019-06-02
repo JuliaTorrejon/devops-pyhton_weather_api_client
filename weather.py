@@ -25,16 +25,16 @@ def temp_kelvin_to_celsius(temp_in_kelvin):
     return decimal(temp_in_kelvin) - decimal(273.15)
 
 # API Call & Parameters requested from the API response
-def fetch_weather(city_name, country_code, appid)
+def fetch_weather(city_name, country_code, api_key):
 
 # Build URL query depending on if there is a country or not - It restricts cities to an ISO 3166 country code
     if country_code:
-        query = {"q":city_name + "," + country_code, "appid":api_key}
+        query = {"q":city_name + "," + country_code, "app_id":api_key}
     else:
-        query = {"q":city_name, "appid":api_key}
+        query = {"q":city_name, "app_id":api_key}
 
 # Get data from openweathermap.org & passing parameter in URL
-request = requests.get(‘api.openweathermap.org/data/2.5/weather’, params=query)
+request = requests.get(‘https://api.openweathermap.org/data/2.5/weather’, params=query)
 
 # Check that the URL has been correctly encoded by printing the URL
 print(r.url)
@@ -72,7 +72,6 @@ else:
       json = ""
       
 # Return a dictionary
-temperature = "temperature"
 currentweather = {}
 currentweather = "temperature"
 currentweather = "max_temperature"
@@ -80,8 +79,10 @@ currentweather = "min_temperature"
 currentweather = "humidity"
 currentweather = "clouds"
 currentweather = "rain"
-c
-
+currentweather = "sunrise"
+currentweather = "sunset"
+currentweather = "country"
+currentweather = "json"
       
 # The option parser is generated based on the docstring above that is passed to docopt function
 if __name__ == '__main__':
