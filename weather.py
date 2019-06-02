@@ -34,7 +34,7 @@ def fetch_weather(city_name, country_code, api_key):
         query = {"q":city_name, "app_id":api_key}
 
 # Get data from openweathermap.org & passing parameter in URL
-request = requests.get(‘https://api.openweathermap.org/data/2.5/weather’, params=query)
+request = requests.get('https://api.openweathermap.org/data/2.5/weather', params=query)
 
 # Check that the URL has been correctly encoded by printing the URL
 print(r.url)
