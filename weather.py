@@ -87,4 +87,5 @@ currentweather = "json"
 # The option parser is generated based on the docstring above that is passed to docopt function
 if __name__ == '__main__':
     arguments = docopt(__doc__)
-    print(arguments)
+    # print(arguments)
+    country = arguments["--country"]
