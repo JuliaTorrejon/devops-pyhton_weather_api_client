@@ -44,7 +44,7 @@ status = r.status_code
 
 # If HTTP status code is = 200 (Valid response)
 if r.status_code == 200:
-response = r.json()
+      response = r.json()
 # Print (response)
 # Print (response)["main"]["temperature"]
       temperature = temp_kelvin_to_celsius(response["main"]["temp"])
