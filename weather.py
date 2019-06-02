@@ -15,8 +15,8 @@ Options:
 """    
 
 import requests
-import docopt
 import os
+from docopt import docopt
 from datetime import datetime
 from decimal import *
 
