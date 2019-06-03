@@ -95,3 +95,15 @@ if __name__ == '__main__':
 # Get weather's information if OpenWeatherMap API key is obtained
 apikey = os.environ['OPENWEATHERMAP_APIKEY']
 print apikey
+
+# DRAFT #
+
+if r.status_code == 401:
+      print (Error 401)
+      
+else:
+      print (Error 400)
+      
+# Unicode Character 'DEGREE CELSIUS' (U+2103)
+
+Python source code	u"\u2103"
