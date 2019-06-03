@@ -11,7 +11,9 @@ Usage:
 Options:
       --h, --help               Show a brief usage summary
       --country=COUNTRY         Restrict cities to an ISO 3166 country code
-      
+
+An OpenWeatherMap API key MUST be provided in via the OPENWEATHERMAP_KEY environment variable.     
+
 """    
 
 import requests
