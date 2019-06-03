@@ -104,6 +104,6 @@ if r.status_code == 401:
 else:
       print (Error 400)
       
-# Unicode Character 'DEGREE CELSIUS' (U+2103)
+# Unicode Character 'Degree Celsius' (U+2103)
 
 Python source code	u"\u2103"
