@@ -99,14 +99,16 @@ except:
       print ("OPENWEATHERMAP_KEY API error")
       apikey = ""
       exit(1)
-
-# DRAFT #
-
-if r.status_code == 401:
-      print (Error 401)
       
+city = <city>
+
+weather = fetch_weather(city_name, country_code, api_key):
+
+# If status code is = 401 (Unauthorised) or 404 (Not Found)
+if r.status_code == 401:
+      print ("Error 401")   
 else:
-      print (Error 400)
+      print ("Error 404")
       
 # Unicode Character 'Degree Celsius' (U+2103)
 
