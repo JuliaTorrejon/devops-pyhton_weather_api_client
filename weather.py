@@ -93,8 +93,12 @@ if __name__ == '__main__':
 
 
 # Get weather's information if OpenWeatherMap API key is obtained
-apikey = os.environ['OPENWEATHERMAP_APIKEY']
-print apikey
+try:
+      print apikey = os.environ['OPENWEATHERMAP_KEY']
+except:
+      print ("OPENWEATHERMAP_KEY API error")
+      apikey = ""
+      exit(1)
 
 # DRAFT #
 
