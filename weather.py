@@ -28,8 +28,7 @@ def temp_kelvin_to_celsius(temp_in_kelvin):
 
 # API Call & Parameters requested from the API response
 def fetch_weather(city_name, country_code, api_key):
-
-      # Build URL query depending on if there is a country or not - It restricts cities to an ISO 3166 country code
+# Build URL query depending on if there is a country or not - It restricts cities to an ISO 3166 country code
     if country_code:
         query = {'q': city_name + ',' + country_code, 'app_id': api_key}
     else:
