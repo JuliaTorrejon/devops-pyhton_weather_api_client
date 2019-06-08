@@ -104,7 +104,7 @@ except:
 city = argument["<city>"]
 
 # Store the values of "city_name", "country_code" and "api_key" in variable: weather
-weather = fetch_weather(city_name, country_code, api_key):
+weather = fetch_weather(city_name, country_code, api_key)
       
 # Return weather information
 if weather["status"] == 200:
