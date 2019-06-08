@@ -94,22 +94,26 @@ if __name__ == '__main__':
 
 # Get weather's information if OpenWeatherMap API key is obtained
 try:
-      print apikey = os.environ['OPENWEATHERMAP_KEY']
+    apikey = os.environ['OPENWEATHERMAP_KEY']
 except:
-      print ("OPENWEATHERMAP_KEY API error")
-      apikey = ""
-      exit(1)
-      
-city = <city>
+    print ("OPENWEATHERMAP_KEY API error")
+    apikey = ""
+    exit(1)
 
+# Store the value of "city" key in variable: city   
+city = argument["<city>"]
+
+# Store the values of "city_name", "country_code" and "api_key" in variable: weather
 weather = fetch_weather(city_name, country_code, api_key):
-
-# If status code is = 401 (Unauthorised) or 404 (Not Found)
-if r.status_code == 401:
-      print ("Error 401")   
-else:
-      print ("Error 404")
       
-# Unicode Character 'Degree Celsius' (U+2103)
-
-Python source code	u"\u2103"
+# Return weather information
+if weather["status"] == 200:
+    temp_in_celsius = weather["temp"]
+    return_country = weather["country"]
+    # Print the default output for city + country + temperature in celsius
+    print("Temperature for " + city.title() + ", " + return_country.title() + ": " + str(temp_in_celsius) + u"\u2103")      
+# Otherwise status code is = 401 (Unauthorised) or 404 (Not Found)
+elif r.status_code == 401:
+      print ("Error 401 - Not authorised")   
+else:
+      print ("Error 404 - Not found")
